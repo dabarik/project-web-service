@@ -16,10 +16,6 @@
 </head>
 <body>
 
-
-
-
-
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
 
@@ -41,7 +37,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" target="_blank" href=""><i class="fab fa-github mr-2"></i>Ne  cliquer</a>
+                <a class="nav-link" target="_blank" href=""><i class="fab fa-github mr-2"></i>Créer une personne</a>
             </li>
         </ul>
     </div>
@@ -55,21 +51,23 @@
 <main class="pt-5 mx-lg-5">
     <div class="container-fluid mt-2">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="md-form form-sm">
-                        <select class="custom-select custom-select-sm">
-                            <option selected>Rechercher une entreprise ou une personne</option>
-                            <option value="Personne">Personne</option>
-                            <option value="Entreprise">Entreprise</option>
-                        </select>
-                        <input class="form-control form-control-sm mt-4" id= "Nom"type="text" placeholder="Tapez une personne...">
-                        <button type="button" id="search" class="btn btn-danger mt-4">Rechercher</button>
-                    </div>
-                </div>
-            </div>
+        <div class="md-form form-sm">
+            <input class="form-control form-control-sm mt-4" id= "service"type="text" placeholder="Service">
+            <input class="form-control form-control-sm mt-4" id= "poste"type="text" placeholder="Poste">
+            <input class="form-control form-control-sm mt-4" id= "nom"type="text" placeholder="Nom">
+            <input class="form-control form-control-sm mt-4" id= "prenom"type="text" placeholder="Prenom">
+            <input class="form-control form-control-sm mt-4" id= "lieu"type="text" placeholder="Lieu">
+
+            <button type="button" id="valider" class="btn btn-danger mt-4">Valider</button>
+            <button type="button" id="BDD" class="btn btn-danger mt-4">Valeurs BDD</button>
+            <button type="button" id="modifier" class="btn btn-danger mt-4">Modifier valeurs</button>
+            <button type="button" id="recup" class="btn btn-danger mt-4">Recuperer une personne</button>
+
+
         </div>
+
+        <div id="pers"></div>
+
     </div>
 </main>
 

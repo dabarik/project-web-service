@@ -20,6 +20,11 @@ public class DemoApplication {
 		return ("index");
 	}
 
+	@GetMapping("/search")
+	public String search(){
+		return("search");
+	}
+
 	public static void main(String[] args) {
 		//Serveur WEB Tomcat
 		SpringApplication.run(DemoApplication.class, args);

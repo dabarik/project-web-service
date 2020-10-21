@@ -29,7 +29,7 @@ public class Personne {
         this.Lieu = lieu;
     }
 
-    public String getService() {
+    public String getService(String service) {
         return Service;
     }
 
