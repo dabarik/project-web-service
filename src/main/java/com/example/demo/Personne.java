@@ -12,6 +12,8 @@ public class Personne {
     private String nom;
     private String prenom;
     private String lieu;
+    private String description;
+
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private Integer id;
@@ -20,15 +22,24 @@ public class Personne {
         super();
     }
 
-    public Personne(String nom, String prenom, String poste, String service, String lieu ) {
+    public Personne(String nom, String prenom, String poste, String service, String lieu, String description ) {
         this.poste = poste;
         this.nom = nom;
         this.prenom = prenom;
         this.service = service;
         this.lieu = lieu;
+        this.description = description;
     }
 
-    public String getService(String service) {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getService() {
         return service;
     }
 

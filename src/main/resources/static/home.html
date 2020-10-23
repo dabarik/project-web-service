@@ -49,18 +49,19 @@
 <main class="pt-4 mx-lg-5">
     <div class="container-fluid mt-3">
 
-        <div class="md-form form-sm">
+        <div class="md-form form-sm" id="menu">
             <input class="form-control form-control-sm" id= "service"type="text" placeholder="Service">
             <input class="form-control form-control-sm" id= "poste"type="text" placeholder="Poste">
             <input class="form-control form-control-sm" id= "nom"type="text" placeholder="Nom">
             <input class="form-control form-control-sm" id= "prenom"type="text" placeholder="Prenom">
             <input class="form-control form-control-sm" id= "lieu"type="text" placeholder="Lieu">
-
-            <div id="bouton">
-                <button type="button" id="rechercher" class="btn btn-danger mt-4">Rechercher</button>
-            </div>
-
         </div>
+
+        <div id="bouton">
+            <button type="button" id="rechercher" class="btn btn-danger mt-4">Rechercher</button>
+        </div>
+
+
 
         <table class="table mt-5" id="tableauPersonne">
             <thead class="black white-text">
@@ -73,21 +74,11 @@
                 <th scope="col">Lieu</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Description</th>
             </tr>
             </thead>
             <tbody id ="personnes">
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td><button type="button" class="btn btn-success">Success</button></td>
-                <td><button type="button" class="btn btn-warning btn-rounded">Modifier</button></td>
-                <td><button type="button" class="btn btn-danger btn-rounded">Supprimer</button></td>
-            </tr>
-
             </tbody>
         </table>
     </div>

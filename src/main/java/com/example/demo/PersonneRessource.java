@@ -26,9 +26,9 @@ public class PersonneRessource{
         personneRepository.deleteById(id);
     }
 
-    @PostMapping(value = "/create/{service}/{poste}/{nom}/{prenom}/{lieu}")
-    public void createPersonne(@PathVariable String service, @PathVariable String poste, @PathVariable String nom, @PathVariable String prenom, @PathVariable String lieu) {
-        Personne personne = new Personne(service,poste,nom,prenom,lieu);
+    @PostMapping(value = "/create/{service}/{poste}/{nom}/{prenom}/{lieu}/{description}")
+    public void createPersonne(@PathVariable String service, @PathVariable String poste, @PathVariable String nom, @PathVariable String prenom, @PathVariable String lieu, @PathVariable String description) {
+        Personne personne = new Personne(service,poste,nom,prenom,lieu,description);
         personneRepository.save(personne);
     }
 
@@ -37,8 +37,8 @@ public class PersonneRessource{
         return personneRepository.findById(id);
     }
 
-    @PutMapping("/update/{id}/{service}/{poste}/{nom}/{prenom}/{lieu}")
-    public ResponseEntity<Object> updateStudent(@PathParam("/pers/{id}") Personne personne, @PathVariable Integer id, @PathVariable String service, @PathVariable String poste, @PathVariable String nom, @PathVariable String prenom, @PathVariable String lieu) {
+    @PutMapping("/update/{id}/{service}/{poste}/{nom}/{prenom}/{lieu}/{description}")
+    public ResponseEntity<Object> updateStudent(@PathParam("/pers/{id}") Personne personne, @PathVariable Integer id, @PathVariable String service, @PathVariable String poste, @PathVariable String nom, @PathVariable String prenom, @PathVariable String lieu, @PathVariable String description) {
 
         Optional<Personne> personneOptional = personneRepository.findById(id);
 
@@ -51,6 +51,7 @@ public class PersonneRessource{
         personne.setLieu(lieu);
         personne.setPoste(poste);
         personne.setService(service);
+        personne.setDescription(description);
 
         personneRepository.save(personne);
 
