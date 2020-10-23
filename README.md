@@ -9,3 +9,5 @@ Et pour ouvrir la DATABASE : java -cp hsqldb.jar org.hsqldb.util.DatabaseManager
 Nous sommes un duo composé de moi-même, XU Thierry et Vidrequin Josué. 
 
 Il est nécessaire de lancer la commande à partir de notre base de données, donc dans le chemin projet-web-service/hsqldb-2.5.1/hsqldb/lib
+
+Également, notre code se trouve dans la branche 'master' et non dans le 'main'. 
