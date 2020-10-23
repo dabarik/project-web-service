@@ -33,8 +33,9 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:8081/home.html">Accueil
-                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8081/index.html">Créer une personne</a>
             </li>
         </ul>
     </div>
@@ -45,23 +46,50 @@
 
 
 <!--Main layout-->
-<main class="pt-5 mx-lg-5">
-    <div class="container-fluid mt-2">
+<main class="pt-4 mx-lg-5">
+    <div class="container-fluid mt-3">
 
         <div class="md-form form-sm">
-            <input class="form-control form-control-sm mt-4" id= "service"type="text" placeholder="Nom">
-            <input class="form-control form-control-sm mt-4" id= "poste"type="text" placeholder="Prenom">
-            <input class="form-control form-control-sm mt-4" id= "nom"type="text" placeholder="Poste">
-            <input class="form-control form-control-sm mt-4" id= "prenom"type="text" placeholder="Service">
-            <input class="form-control form-control-sm mt-4" id= "lieu"type="text" placeholder="Lieu">
+            <input class="form-control form-control-sm" id= "service"type="text" placeholder="Service">
+            <input class="form-control form-control-sm" id= "poste"type="text" placeholder="Poste">
+            <input class="form-control form-control-sm" id= "nom"type="text" placeholder="Nom">
+            <input class="form-control form-control-sm" id= "prenom"type="text" placeholder="Prenom">
+            <input class="form-control form-control-sm" id= "lieu"type="text" placeholder="Lieu">
 
-            <button type="button" id="valider" class="btn btn-danger mt-4">Valider</button>
-
+            <div id="bouton">
+                <button type="button" id="rechercher" class="btn btn-danger mt-4">Rechercher</button>
+            </div>
 
         </div>
 
-        <div id="pers"></div>
+        <table class="table mt-5" id="tableauPersonne">
+            <thead class="black white-text">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Service</th>
+                <th scope="col">Poste</th>
+                <th scope="col">Lieu</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id ="personnes">
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td><button type="button" class="btn btn-success">Success</button></td>
+                <td><button type="button" class="btn btn-warning btn-rounded">Modifier</button></td>
+                <td><button type="button" class="btn btn-danger btn-rounded">Supprimer</button></td>
+            </tr>
 
+            </tbody>
+        </table>
     </div>
 </main>
 

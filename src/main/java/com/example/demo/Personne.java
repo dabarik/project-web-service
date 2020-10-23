@@ -7,12 +7,11 @@ import javax.persistence.*;
 @Entity
 public class Personne {
 
-
-    private String Service;
+    private String service;
     private String poste;
     private String nom;
     private String prenom;
-    private String Lieu;
+    private String lieu;
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private Integer id;
@@ -25,16 +24,16 @@ public class Personne {
         this.poste = poste;
         this.nom = nom;
         this.prenom = prenom;
-        this.Service = service;
-        this.Lieu = lieu;
+        this.service = service;
+        this.lieu = lieu;
     }
 
     public String getService(String service) {
-        return Service;
+        return service;
     }
 
     public void setService(String service) {
-        Service = service;
+        this.service = service;
     }
 
     public String getPoste() {
@@ -54,11 +53,11 @@ public class Personne {
     }
 
     public String getLieu() {
-        return Lieu;
+        return lieu;
     }
 
     public void setLieu(String lieu) {
-        Lieu = lieu;
+        this.lieu = lieu;
     }
 
     public String getPrenom() {
