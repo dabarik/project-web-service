@@ -31,6 +31,17 @@ public class Personne {
         this.description = description;
     }
 
+    @ManyToOne
+    private Entreprise entreprise;
+
+    public Entreprise getEntreprise() {
+        return this.entreprise;
+    }
+
+    public void setEntreprise(Entreprise entreprise) {
+        this.entreprise = entreprise;
+    }
+
     public String getDescription() {
         return description;
     }

@@ -16,6 +16,9 @@ public class PersonneRessource{
     @Autowired
     private PersonneRepository personneRepository;
 
+    private EntrepriseRepository entrepriseRepository;
+
+
     @GetMapping(value = "/search")
     public Iterable<Personne> searchPersonne() {
         return personneRepository.findAll();
@@ -56,5 +59,29 @@ public class PersonneRessource{
         personneRepository.save(personne);
 
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping(value = "/{id}/entreprises")
+    public Optional<Personne> creerEntreprisePersonne(@PathVariable Integer id, Entreprise e) {
+        Optional<Personne> p = personneRepository.findById(id);
+        if(p.isPresent()) {
+            p.get().setEntreprise(e);
+            personneRepository.save(p.get());
+        }
+        return p;
+    }
+
+    @PostMapping("/{id}/entreprises/{idEtp}")
+    public Optional<Personne> creerEntreprisePersonne(@PathVariable Integer id, @PathVariable Integer idEtp) {
+        Optional<Personne> p = personneRepository.findById(id);
+        if(p.isPresent()) {
+
+            Optional<Entreprise> e = entrepriseRepository.findById(Long.valueOf(idEtp));
+            if(e.isPresent()) {
+                p.get().setEntreprise(e.get());
+                personneRepository.save(p.get());
+            }
+        }
+        return p;
     }
 }

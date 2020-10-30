@@ -124,6 +124,8 @@ $(document).ready(function () {
                 var tr = document.createElement("tr");
                 divSearch.appendChild(tr);
 
+                document.getElementById('service');
+
                 var th = document.createElement("th");
                 th.innerHTML = '<th scope="row">' + item.id + '</th>';
                 tr.appendChild(th);

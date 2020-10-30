@@ -10,13 +10,14 @@ public class Entreprise {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String nom;
     private String lieu;
-    private int SIRET;
-    private String id;
+    private Integer SIRET;
 
 
-    public Entreprise(String nom, String lieu, int SIRET) {
+
+    public Entreprise(String nom, String lieu, Integer SIRET) {
         this.nom = nom;
         this.lieu = lieu;
         this.SIRET = SIRET;
@@ -42,20 +43,20 @@ public class Entreprise {
         this.lieu = lieu;
     }
 
-    public int getSIRET() {
+    public Integer getSIRET() {
         return SIRET;
     }
 
-    public void setSIRET(int SIRET) {
+    public void setSIRET(Integer SIRET) {
         this.SIRET = SIRET;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     @Id
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 }
