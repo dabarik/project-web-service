@@ -12,10 +12,12 @@ Nous sommes un duo composé de XU Thierry et Vidrequin Josué.
 
 Également, notre code se trouve dans la branche 'master' et non dans le 'main'. 
 
-- Nous avons ajouté 2 entitées donc désormais, nous en avons trois qui sont liées en One-To-Many avec Pays et Entreprise.
+- Nous avons ajouté 2 entitées donc désormais, nous en avons trois qui sont liées en One-To-Many avec Pays et Utilisateur.
 Entreprise qui est relié avec Personne et Pays qui est relié avec Entreprise.
 Nous avons essayé de relié la base idPays avec la table Entreprise mais nous avons pas réussi dû à un manque de temps. 
 Donc, nous n'avons par conséquent pas réussi non plus avec Personne et Entreprise.
+
+L'entité Utilisateur va nous permettre de mettre en BDD les utilisateurs qui se connectent. 
 
 Nous avons également ajoutés une entité Utilisateur pour la connexion, qui est quant à elle, indépendante.
 
